@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <h1>About Me</h1>
+
+    <ul>
+      <li>Nickname: <span id="nickname"></span></li>
+      <li>Favorites: <span id="favorites"></span></li>
+      <li>Hometown: <span id="hometown"></span></li>
+    </ul>
+
+    <script>
+    document.body.style.fontFamily = "Arial, sans-serif";
+
+    var nick = document.getElementsByTagName("span")[0];
+    nick.setAttribute("id","nick");
+
+    var favor = document.getElementsByTagName("span")[1];
+    favor.setAttribute("id","favor");
+
+    var home = document.getElementsByTagName("span")[2];
+    home.setAttribute("id","home");
+
+    var clas = document.getElementsByTagName("li");
+    for(var value of clas){
+      value.setAttribute("class","listitem");
+    } 
+
+    var coloritem = document.getElementsByClassName("listitem");
+    for(var colors of coloritem){
+      colors.style.color = "red";
+    }
+
+    var image = document.createElement("img");
+    image.setAttribute("src","./assets/childnodes.png");
+    document.body.append(image);
+    
+    </script>
+  </body>
+</html>

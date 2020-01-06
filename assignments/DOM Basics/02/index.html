@@ -47,6 +47,32 @@
     <div class="demo-query-all">Access me by query all (2)</div>
     <script>
       // your code goes here
+      document.getElementById("demo").style.border = "1px solid purple";
+      // document.querySelectorAll(".demo").style.border = "1px solid orange";------ why not..?
+      
+      var orange = document.getElementsByClassName("demo");
+      var i = 0;
+      while (i<orange.length){
+      orange[i].style.border = "1px solid orange";
+      i++;
+      }
+      // document.querySelectorAll("article").style.border = "1px solid blue"; ----- why not..?
+      var blue = document.getElementsByTagName("article");
+      var x = 0;
+      while(x<blue.length){
+        blue[x].style.border = "1px solid blue";
+        x++;
+      }
+      
+      document.querySelector("#demo-query").style.border = "1px solid grey";
+
+      var green = document.querySelectorAll(".demo-query-all");
+      var y = 0;
+      while(y<green.length){
+        green[y].style.border = "1px solid green";
+        y++;
+      }
+
     </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 var quotes;
-
 // Write your code here
+
 
 
 
@@ -314,3 +314,26 @@ quotes = [
         "quoteText": "Great talent finds happiness in execution."
     }
 ];
+
+
+var body = document.querySelector("body");
+var div = document.createElement("div");
+body.append(div);
+div.style.width = "80%";
+div.style.height = "100%";
+div.style.border = "1px solid red";
+
+var para = document.createElement("p");
+div.append(para);
+
+var btn = document.createElement("button");
+div.append(btn);
+
+var button = document.querySelector("button");
+function generate(){
+    var num = Math.floor(Math.random()*quotes.length-1);
+   p.innerText = quotes[num].quoteText;
+}
+button.addEventListener("click",generate);
+var p = document.querySelector("p");
+p.style.fontSize = "10rem";

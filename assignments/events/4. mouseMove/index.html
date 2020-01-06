@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Check | Position</title>
+</head>
+<body>
+    <div>
+        <h1>Click any where inside the box to get position</h1>
+        <p class="para"></p>
+        <!-- <p class="para_1"></p>
+        <p class="para_2"></p>
+        <p class="para_3"></p>
+        <p class="para_4"></p> -->
+    </div>
+    <script>
+    var div = document.querySelector("div");
+    div.style.width = "1000px";
+    div.style.height = "800px";
+    div.style.border = "10px solid black";
+    
+
+    function location1(event){
+        var screen_x = event.screenX;
+        var screen_y = event.screenY;
+        var client_x = event.clientX;
+        var client_y = event.clientY;
+        var scren = "screen_x : "+screen_x+"screen_y : "+screen_y;
+        var client = "client_x : "+client_x+"client_y : "+client_y;
+        document.querySelector(".para").innerHTML = scren+", "+client; 
+    }
+    div.addEventListener("click",location1);
+
+    </script>
+    
+</body>
+</html>

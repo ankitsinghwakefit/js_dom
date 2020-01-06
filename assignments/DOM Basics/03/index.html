@@ -39,5 +39,18 @@
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
+    ul.firstElementChild.style.backgroundColor="red";
+
+    var all = document.querySelectorAll("li");
+    for(let value of all){
+      value.style.backgroundColor = "green";
+    }
+
+    all[all.length-1].style.backgroundColor = "grey";
+
+    var middle = document.querySelectorAll("li")[1];
+    
+    middle.nextElementSibling.style.backgroundColor = "aquamarine"; //-----------------------
+    middle.previousElementSibling.style.backgroundColor = "coral";
   </script>
 </html>
